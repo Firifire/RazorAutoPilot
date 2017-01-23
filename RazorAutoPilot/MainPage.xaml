@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="RazorAutoPilot.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RazorAutoPilot"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="200,100,0,0">
+            <TextBox x:Name="Temperature" Text="Temperature" Margin="10" IsReadOnly="True" />
+            <TextBox x:Name="Humidity" Text="Humidity" Margin="10" IsReadOnly="True" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,100,200,0">
+            <TextBox x:Name="Date" Text="Date" Margin="10" IsReadOnly="True" />
+            <TextBox x:Name="Time" Text="Time" Margin="10" IsReadOnly="True" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="275,0,0,700">
+            <TextBlock Text = " Room Status" FontSize="20"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="200,0,0,350">
+            <Button x:Name="Light" Content="Light: Off" Margin="10" Width = "100" IsEnabled="False" Click="Light_Click"/>
+            <Button x:Name="Fan" Content="Fan: Off" Margin="10" Width = "100" IsEnabled="False" Click="Fan_Click"/>
+            <Button x:Name="A_C" Content="A/C: Off" Margin="10" Width = "100" IsEnabled="False" Click="A_C_Click"/>
+            <Button x:Name="PC" Content="PC: Online" Margin="10" Width = "100" IsEnabled="False" Click="PC_Click"/>
+            <TextBox x:Name="Security" Text="Security:" Margin="10" Width = "100" IsReadOnly="True"/>
+            <TextBox x:Name="Alarm" Text="Alarm: off" Margin="10" Width = "100" IsReadOnly="True"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="350,0,0,350">
+            <Button x:Name="BLight" Content="Auto" Margin="10" Width = "100" Click="BLight_Click" />
+            <Button x:Name="BFan" Content="Auto" Margin="10" Width = "100" Click="BFan_Click" />
+            <Button x:Name="BA_C" Content="Auto" Margin="10" Width = "100" Click="BA_C_Click"/>
+            <Button x:Name="BPC" Content="Auto" Margin="10" Width = "100" Click="BPC_Click"/>
+            <Button x:Name="BSecurity" Content="On" Margin="10" Width = "100" Click="BSecurity_Click"/>
+            <Button x:Name="BAlarm" Content="Trigger" Margin="10" Width = "100" Click="BAlarm_Click" IsEnabled="False"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="1600,0,0,600">
+            <TextBox x:Name="ClientMSG" Text="No Clients" FontSize="20" />
+            <Button x:Name="Server" Content="Start Server"  Margin="10" Width = "100" Click="Server_Click"/>
+        </StackPanel>    
+    </Grid>
+</Page>
